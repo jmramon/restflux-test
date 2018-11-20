@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<title>ReactApp</title>
+</head>
+<body>
+	<div>
+		<div>
+			<h1>ReactApp</h1>
+		</div>
+		<div>
+			<table id="myTableId" dt:table="true">
+				<thead>
+					<tr>
+						<th>Title</th>
+						<th>Published Date</th>
+						<th>Department</th>
+						<th>Author</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="resultN0 : ${messages}">
+						<td th:text="${resultN0.title}">N/A</td>
+						<td th:text="${resultN0.fechaPublicacion}">N/A</td>
+						<td th:text="${resultN0.department}">N/A</td>
+						<td th:text="${resultN0.author}">N/A</td>
+						<td th:if="${ not #strings.isEmpty(resultN0.datasetFieldsDescription)}"
+							th:text="${#strings.substring(resultN0.datasetFieldsDescription,0,99)}">N/A</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	
+	<div class="pagination-div">
+		<a th:href="@{/results(page=${page-1})}">&lt;&lt;Previous</a>
+		<a th:href="@{/results(page=${page+1})}">Next&gt;&gt;</a>
+	</div>
+
+	
+</body>
+</html>
+
+
+
+
+
