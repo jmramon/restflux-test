@@ -13,17 +13,8 @@ import com.gamonsoft.restflux.model.ResultN3;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
-/*
-import org.springframework.data.domain.Pageable;
-*/
 @Component
-public class ReactiveResultRepository {
-	
-	/*
-	public List<ResultN0> getPage(Pageable page){
-		page.get
-	}
-	*/
+public class ResultRepository {
 	
 	public Flux<ResultN0> findPaginated(int page,int size,String query){
 		
@@ -41,7 +32,7 @@ public class ReactiveResultRepository {
 		
 		Flux<ResultN0> resultsN0 = resultN3List.flatMapMany(Flux::fromIterable);
 		
-		resultsN0.delaySequence(Duration.ofSeconds(10));
+		//resultsN0.delaySequence(Duration.ofSeconds(10));
 		
 		return resultsN0;
 	}

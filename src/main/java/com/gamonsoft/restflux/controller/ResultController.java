@@ -7,13 +7,13 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.reactive.result.view.Rendering;
 import org.thymeleaf.spring5.context.webflux.ReactiveDataDriverContextVariable;
 
-import com.gamonsoft.restflux.service.ReactiveResultRepository;
+import com.gamonsoft.restflux.service.ResultRepository;
 
 @Controller
-public class ReactResultController {
+public class ResultController {
 	
   @Autowired
-  ReactiveResultRepository reactiveResultRepository;
+  ResultRepository reactiveResultRepository;
   
   @GetMapping("/")
   public Rendering index() {
@@ -43,15 +43,3 @@ public class ReactResultController {
                     .build();
   }
 }
-
-/*
-
-return Rendering.view("index")
-.modelAttribute("message", new Message("Hello, this is a static message."))
-.modelAttribute("messages", new ReactiveDataDriverContextVariable(
-        Flux.zip(
-            Flux.interval(Duration.ofSeconds(1)),
-            reactiveResultRepository.findAll2().delayElements(Duration.ofSeconds(1))
-    )))
-.build();
-*/
