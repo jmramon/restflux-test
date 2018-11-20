@@ -1,8 +1,3 @@
-:toc:
-:icons: font
-:source-highlighter: prettify
-:project_id: restflux-test
-
 This is a test creating a REST Client using Spring WebFlux.
 
 == What You'll Build
@@ -11,8 +6,6 @@ You’ll build a RESTful WebClient consumer of that
 service. 
 Additionally Spring Boot Actuator is enabled in order to monitor and interact with your application.
 You'll be able to see output in both System.out and at:
-
-[source]
 http://localhost:9090/results
 http://localhost:9090/actuator
 
@@ -20,7 +13,6 @@ http://localhost:9090/actuator
 
 :java_version: 1.8
 
-[[initial]]
 == Create(Simulate) a Reactive Result Repository
 
 The repository is based on WebClient for retrieving results from rest service.
