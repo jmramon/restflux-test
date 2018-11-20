@@ -1,5 +1,5 @@
 
-package com.gamonsoft.reactapp.model;
+package com.gamonsoft.restflux.model;
 
 import java.util.HashMap;
 import java.util.List;
@@ -16,9 +16,11 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
     "code",
     "display_name",
     "description",
+    "parent",
     "created",
     "package_count",
     "image_display_url",
+    "tematica_nti",
     "description_translated",
     "name",
     "is_organization",
@@ -33,7 +35,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
     "id",
     "approval_status"
 })
-public class Parent {
+public class Organization {
 
     @JsonProperty("code")
     private String code;
@@ -41,14 +43,18 @@ public class Parent {
     private String displayName;
     @JsonProperty("description")
     private String description;
+    @JsonProperty("parent")
+    private Parent parent;
     @JsonProperty("created")
     private String created;
     @JsonProperty("package_count")
     private Integer packageCount;
     @JsonProperty("image_display_url")
     private String imageDisplayUrl;
+    @JsonProperty("tematica_nti")
+    private String tematicaNti;
     @JsonProperty("description_translated")
-    private DescriptionTranslated descriptionTranslated;
+    private DescriptionTranslated_ descriptionTranslated;
     @JsonProperty("name")
     private String name;
     @JsonProperty("is_organization")
@@ -58,7 +64,7 @@ public class Parent {
     @JsonProperty("image_url")
     private String imageUrl;
     @JsonProperty("groups")
-    private List<Object> groups = null;
+    private List<Group> groups = null;
     @JsonProperty("type")
     private String type;
     @JsonProperty("title")
@@ -66,7 +72,7 @@ public class Parent {
     @JsonProperty("revision_id")
     private String revisionId;
     @JsonProperty("title_translated")
-    private TitleTranslated_ titleTranslated;
+    private TitleTranslated__ titleTranslated;
     @JsonProperty("num_followers")
     private Integer numFollowers;
     @JsonProperty("id")
@@ -106,6 +112,16 @@ public class Parent {
         this.description = description;
     }
 
+    @JsonProperty("parent")
+    public Parent getParent() {
+        return parent;
+    }
+
+    @JsonProperty("parent")
+    public void setParent(Parent parent) {
+        this.parent = parent;
+    }
+
     @JsonProperty("created")
     public String getCreated() {
         return created;
@@ -136,13 +152,23 @@ public class Parent {
         this.imageDisplayUrl = imageDisplayUrl;
     }
 
+    @JsonProperty("tematica_nti")
+    public String getTematicaNti() {
+        return tematicaNti;
+    }
+
+    @JsonProperty("tematica_nti")
+    public void setTematicaNti(String tematicaNti) {
+        this.tematicaNti = tematicaNti;
+    }
+
     @JsonProperty("description_translated")
-    public DescriptionTranslated getDescriptionTranslated() {
+    public DescriptionTranslated_ getDescriptionTranslated() {
         return descriptionTranslated;
     }
 
     @JsonProperty("description_translated")
-    public void setDescriptionTranslated(DescriptionTranslated descriptionTranslated) {
+    public void setDescriptionTranslated(DescriptionTranslated_ descriptionTranslated) {
         this.descriptionTranslated = descriptionTranslated;
     }
 
@@ -187,12 +213,12 @@ public class Parent {
     }
 
     @JsonProperty("groups")
-    public List<Object> getGroups() {
+    public List<Group> getGroups() {
         return groups;
     }
 
     @JsonProperty("groups")
-    public void setGroups(List<Object> groups) {
+    public void setGroups(List<Group> groups) {
         this.groups = groups;
     }
 
@@ -227,12 +253,12 @@ public class Parent {
     }
 
     @JsonProperty("title_translated")
-    public TitleTranslated_ getTitleTranslated() {
+    public TitleTranslated__ getTitleTranslated() {
         return titleTranslated;
     }
 
     @JsonProperty("title_translated")
-    public void setTitleTranslated(TitleTranslated_ titleTranslated) {
+    public void setTitleTranslated(TitleTranslated__ titleTranslated) {
         this.titleTranslated = titleTranslated;
     }
 

@@ -1,5 +1,5 @@
 
-package com.gamonsoft.reactapp.model;
+package com.gamonsoft.restflux.model;
 
 import java.util.HashMap;
 import java.util.List;

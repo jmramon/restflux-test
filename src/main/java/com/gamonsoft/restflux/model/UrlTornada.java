@@ -1,5 +1,5 @@
 
-package com.gamonsoft.reactapp.model;
+package com.gamonsoft.restflux.model;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -16,7 +16,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
     "en",
     "es"
 })
-public class DescriptionTranslated {
+public class UrlTornada {
 
     @JsonProperty("ca")
     private String ca;

@@ -1,4 +1,4 @@
-package com.gamonsoft.reactapp;
+package com.gamonsoft.restflux;
 
 
 import java.util.List;
@@ -10,7 +10,7 @@ import org.springframework.http.MediaType;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.web.reactive.function.client.WebClient;
 
-import com.gamonsoft.reactapp.model.ResultN3;
+import com.gamonsoft.restflux.model.ResultN3;
 
 import reactor.core.publisher.Flux;
 

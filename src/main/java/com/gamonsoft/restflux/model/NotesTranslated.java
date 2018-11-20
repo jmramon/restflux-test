@@ -1,5 +1,5 @@
 
-package com.gamonsoft.reactapp.model;
+package com.gamonsoft.restflux.model;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -12,36 +12,49 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
-    "capacity",
-    "name"
+    "ca",
+    "en",
+    "es"
 })
-public class Group {
+public class NotesTranslated {
 
-    @JsonProperty("capacity")
-    private String capacity;
-    @JsonProperty("name")
-    private String name;
+    @JsonProperty("ca")
+    private String ca;
+    @JsonProperty("en")
+    private String en;
+    @JsonProperty("es")
+    private String es;
     @JsonIgnore
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
-    @JsonProperty("capacity")
-    public String getCapacity() {
-        return capacity;
+    @JsonProperty("ca")
+    public String getCa() {
+        return ca;
     }
 
-    @JsonProperty("capacity")
-    public void setCapacity(String capacity) {
-        this.capacity = capacity;
+    @JsonProperty("ca")
+    public void setCa(String ca) {
+        this.ca = ca;
     }
 
-    @JsonProperty("name")
-    public String getName() {
-        return name;
+    @JsonProperty("en")
+    public String getEn() {
+        return en;
     }
 
-    @JsonProperty("name")
-    public void setName(String name) {
-        this.name = name;
+    @JsonProperty("en")
+    public void setEn(String en) {
+        this.en = en;
+    }
+
+    @JsonProperty("es")
+    public String getEs() {
+        return es;
+    }
+
+    @JsonProperty("es")
+    public void setEs(String es) {
+        this.es = es;
     }
 
     @JsonAnyGetter
