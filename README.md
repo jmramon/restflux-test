@@ -2,7 +2,7 @@ This is a test creating a REST Client using Spring WebFlux.
 
 == What You'll Build
 
-You’ll build a RESTful WebClient consumer of that
+You’ll test a RESTful WebClient consumer of that
 service. 
 Additionally Spring Boot Actuator is enabled in order to monitor and interact with your application.
 You'll be able to see output in both System.out and at:
