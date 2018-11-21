@@ -6,18 +6,20 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 <title>ReactApp</title>
+<link rel="stylesheet" media="screen" href="beauty.css">
 </head>
 <body>
 	<div>
 		<div>
 			<h1>RestFlux</h1>
+			<p>Results from <a href="http://opendata-ajuntament.barcelona.cat/data/api/3/action/package_search">http://opendata-ajuntament.barcelona.cat/data/api/3/action/package_search</a></p>
 		</div>
 		<div>
-			<table id="myTableId" dt:table="true">
+			<table id="results" dt:table="true">
 				<thead>
 					<tr>
 						<th>Title</th>
-						<th>Published Date</th>
+						<th>Date</th>
 						<th>Department</th>
 						<th>Author</th>
 						<th>Description</th>
@@ -37,7 +39,7 @@
 		</div>
 	</div>
 	
-	<div class="pagination-div">
+	<div>
 		<a th:href="@{/results(page=${page-1})}">&lt;&lt;Previous</a>
 		<a th:href="@{/results(page=${page+1})}">Next&gt;&gt;</a>
 	</div>

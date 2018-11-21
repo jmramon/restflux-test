@@ -1,0 +1,56 @@
+= RESTFlux 
+:docs: https://docs.spring.io/spring-boot/docs/current-SNAPSHOT/reference
+
+This is a test creating a REST Client using Spring WebFlux.
+
+== What You'll Build
+
+You’ll test a RESTful WebClient consumer. 
+Additionally Spring Boot Actuator is enabled in order to monitor and interact with your application.
+You'll be able to see output in both System.out and at:
+http://localhost:9090/results
+http://localhost:9090/actuator
+
+== What You'll Need
+
+:java_version: 1.8
+
+== Create(Simulate) a Reactive Result Repository
+
+The repository is based on WebClient for retrieving results from rest service.
+
+`src/main/java/com/gamonsoft/restflux/service/ResultRepository.java`
+== Create a Controller
+
+The controller is using ReactiveDataDriverContextVariable for enabling a reactive behavior.
+
+`src/main/java/com/gamonsoft/restflux/controller/ResultController.java`
+
+== Create Thymeleaf templates
+
+Views also support reactive communication.
+
+`src/main/resources/templates`
+
+== Make the Application Executable
+
+Although it is possible to package this service as a traditional
+link:/understanding/WAR[WAR] file for deployment to an external application server,
+the simpler approach demonstrated below creates a standalone application. You package
+everything in a single, executable JAR file, driven by a good old Java `main()` method.
+Along the way, you use Reactive Spring's support for embedding the Netty server as the
+HTTP runtime, instead of deploying to an external instance.
+
+Docker configuration file is also provided.
+
+`src/main/java/com/gamonsoft/restflux/Application.java`
+[source,java]
+
+== Test the Application
+
+Now that the application is running, you can test it. To start with, you can open a
+browser and go to `http://localhost:9090/results`.
+
+== Summary
+
+Congratulations! You have tested a WebClient to consume a RESTful service!

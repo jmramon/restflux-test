@@ -32,7 +32,7 @@ public class ResultController {
 	
 	if(size == null) {
 		//FIXME move to application.properties
-		size = 10;
+		size = 5;
 	}
 	  
     return Rendering.view("results")
