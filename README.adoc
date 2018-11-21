@@ -13,7 +13,7 @@ http://localhost:9090/actuator
 
 == What You'll Need
 
-:java_version: 1.8
+java_version: 1.8
 
 == Create(Simulate) a Reactive Result Repository
 
