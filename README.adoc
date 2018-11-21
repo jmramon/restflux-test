@@ -15,7 +15,7 @@ http://localhost:9090/actuator
 
 java_version: 1.8
 
-== Create(Simulate) a Reactive Result Repository
+== Create a Reactive Result Repository
 
 The repository is based on WebClient for retrieving results from rest service.
 
